@@ -1,12 +1,9 @@
-
 import './Navbar.css'
-
-
-
 
 const Navbar = () => {
   return (
-    <div>okayyyyyyyyr</div>
+
+    <div>okayyyyyyyy</div>
   )
 }
 
