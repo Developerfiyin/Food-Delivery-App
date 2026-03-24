@@ -15,7 +15,6 @@ const Navbar = () => {
           <input type="text" placeholder="Search..." />
         </form>
       
-
       <div className="h-15 w-15 rounded-md flex shadow-xl items-center justify-center bg-white  ">
         <LuShoppingBag className="h-7.5 w-7.5 text-purple-500 " />
       </div>
