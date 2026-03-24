@@ -10,9 +10,9 @@ const Navbar = () => {
         <MdFastfood className="h-7.5 w-7.5 text-purple-500 " />
       </div>
       
-        <form className="w-[60%] rounded-md shadow-xl h-15 flex items-center px-5 bg-white ">
-          <IoSearch />
-          <input type="text" placeholder="Search..." />
+        <form className="w-[60%] gap-5 rounded-md shadow-xl  h-15 flex items-center px-5 bg-white ">
+          <IoSearch className="h-5 w-5 text-purple-500"/>
+          <input type="text" placeholder="Search Items..." className=" w-full text-[20px] outline-none " />
         </form>
       
       <div className="h-15 w-15 rounded-md flex shadow-xl items-center justify-center bg-white  ">
