@@ -21,7 +21,7 @@ const Home = () => {
       </div>
     
     
-    <div>
+    <div className= " w-full flex flex-wrap gap-5 px-5 jsutify-center items-center pt-8 pb-8 ">
  {food_items.map((item) => (
   <Card name={item.food_name} image={item.food_image} price={item.price} id={item.id} type={item.food_type} />
         ))}
