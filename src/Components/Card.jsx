@@ -2,7 +2,7 @@ import React from "react";
 import { LuLeafyGreen } from "react-icons/lu";
 
 import image1 from "../assets/image1.avif";
-const Card = (name , icon, image) => {
+const Card = (name, id, price, type, image) => {
   return (
     <div className="w-75 p-4 rounded-lg  h-100 bg-white flex flex-col gap-3 shadow-lg ">
       <div className="overflow-hidden  w-full h-[60%] rounded-lg ">

@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../Components/Navbar/Navbar";
 import Categories from "../Category";
 import Card from "../Components/Card";
+import { food_items } from "../food";
 
 const Home = () => {
   return (
@@ -13,14 +14,18 @@ const Home = () => {
             <div className="w-35 h-32.5 flex flex-col items-start justify-start gap-5 p-5 font-semibold shadow-xl
             hover:bg-purple-300 cursor-pointer transition-all duration-200 rounded-lg text-gray-500 text-[20px] bg-white ">
               {item.icon}
-
               {item.name}
             </div>
           );
         })}
       </div>
-
-      <Card/>
+    
+    
+    <div>
+ {food_items.map((item) => (
+  <Card name={item.food_name} image={item.food_image} price={item.price} id={item.id} type={item.food_type} />
+        ))}
+    </div>
     </div>
   );
 };
