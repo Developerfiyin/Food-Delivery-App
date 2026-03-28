@@ -8,12 +8,12 @@ const Home = () => {
 
     let [categ, Setcateg] = useState( food_items)
 
-    function filter(category)  {
+    function filter(category) {
         if (category==="All") {
             Setcateg(food_items )
 
         } else{
-            food_items.filter((item) => (item.food_category===category ) ) 
+         let newList =  food_items.filter((item) => (item.food_category===category ) ) 
             Setcateg(newList)
             
         }
