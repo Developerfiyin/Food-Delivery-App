@@ -1,20 +1,27 @@
 import { MdFastfood } from "react-icons/md";
+import React from "react";
 import { IoSearch } from "react-icons/io5";
 import { LuShoppingBag } from "react-icons/lu";
+import userContext from "../../context/userContext";
 
 const Navbar = () => {
+  const { input, setInput } = React.useContext(userContext);
+
   return (
     <div className="w-full h-25 flex justify-between items-center px-5 md:px-8">
       <div className="h-15 w-15 rounded-md shadow-xl flex items-center justify-center bg-white  ">
         <MdFastfood className="h-7.5 w-7.5 text-purple-500 " />
       </div>
 
-      <form className=" h-15 w-[45%] gap-5 md:w-[70%] rounded-md shadow-xl  flex items-center px-5 bg-white ">
+      <form className=" h-15 w-[45%] gap-5 md:w-[70%] rounded-md shadow-xl  flex items-center px-5 bg-white "
+        onSubmit={(e) => e.preventDefault()}
+      >
         <IoSearch className="h-5 w-5 text-purple-500" />
         <input
           type="text"
           placeholder="Search Items..."
           className=" w-full text-[16px] md:text-[20px] outline-none "
+          onChange={ (e) => setInput(e.target.value)} value={input}
         />
       </form>
 
