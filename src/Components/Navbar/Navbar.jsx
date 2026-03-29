@@ -5,7 +5,7 @@ import { LuShoppingBag } from "react-icons/lu";
 import { dataContext } from "../../context/userContext";
 
 const Navbar = () => {
-  let {input, setInput} = useContext(dataContext)
+  let {input, setInput, categ, Setcateg} = useContext(dataContext)
 
   return (
     <div className="w-full h-25 flex justify-between items-center px-5 md:px-8">

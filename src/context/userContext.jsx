@@ -1,11 +1,14 @@
 import React , {useState, createContext} from "react";
+import { food_items } from "../food";
 
 export const dataContext = createContext();
 
 const UserContext = ({ children }) => {
+      let [categ, Setcateg] = useState(food_items)
+
   let [input, setInput] = useState("");
 
-  let data = {input, setInput};
+  let data = {input, setInput, categ, Setcateg};
   return (
     <div>
       <dataContext.Provider value={data}>
