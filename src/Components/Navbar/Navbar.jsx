@@ -1,11 +1,11 @@
+import React, {useContext} from "react";
 import { MdFastfood } from "react-icons/md";
-import React from "react";
 import { IoSearch } from "react-icons/io5";
 import { LuShoppingBag } from "react-icons/lu";
-import userContext from "../../context/userContext";
+import userContext, { dataContext } from "../../context/userContext";
 
 const Navbar = () => {
-  const { input, setInput } = React.useContext(userContext);
+  let {input, setInput} = useContext(dataContext)
 
   return (
     <div className="w-full h-25 flex justify-between items-center px-5 md:px-8">

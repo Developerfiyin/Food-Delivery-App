@@ -7,7 +7,9 @@ const userContext = ({ children }) => {
   let data = {input, setInput};
   return (
     <div>
-      <userContext.Provider value={data}>{children}</userContext.Provider>
+      <dataContext.Provider value={data}>
+        {children}
+      </dataContext.Provider>
     </div>
   );
 };
