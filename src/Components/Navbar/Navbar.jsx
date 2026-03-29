@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, {useContext, useEffect} from "react";
 import { MdFastfood } from "react-icons/md";
 import { IoSearch } from "react-icons/io5";
 import { LuShoppingBag } from "react-icons/lu";
@@ -6,6 +6,15 @@ import { dataContext } from "../../context/userContext";
 
 const Navbar = () => {
   let {input, setInput, categ, Setcateg} = useContext(dataContext)
+  useEffect(() => {
+    if (input==="") {
+      Setcateg( food_items)
+    } else {
+      let newList = food_items.filter((item) => item.food_name.toLowerCase().includes(input.toLowerCase()) )
+      Setcateg(newList)
+    }
+  }, [input]);
+
 
   return (
     <div className="w-full h-25 flex justify-between items-center px-5 md:px-8">
