@@ -6,7 +6,16 @@ import { food_items } from "../food";
 import { dataContext } from "../context/userContext";
 
 const Home = () => {
-  let {categ, Setcateg} = useContext(dataContext)
+  let {categ, Setcateg, input} = useContext(dataContext)
+
+
+
+
+
+
+
+
+  
 
     function filter(category) {
         if (category==="All") {

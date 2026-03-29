@@ -3,17 +3,14 @@ import { MdFastfood } from "react-icons/md";
 import { IoSearch } from "react-icons/io5";
 import { LuShoppingBag } from "react-icons/lu";
 import { dataContext } from "../../context/userContext";
+import { food_items } from "../../food";
 
 const Navbar = () => {
   let {input, setInput, categ, Setcateg} = useContext(dataContext)
   useEffect(() => {
-    if (input==="") {
-      Setcateg( food_items)
-    } else {
-      let newList = food_items.filter((item) => item.food_name.toLowerCase().includes(input.toLowerCase()) )
-      Setcateg(newList)
-    }
-  }, [input]);
+    let newList =  food_items.filter((item) => (item.food_name.toLowerCase().includes(input.toLowerCase()) ) )
+    Setcateg(newList)
+  }, [input])
 
 
   return (
