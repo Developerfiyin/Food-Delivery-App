@@ -2,7 +2,7 @@ import React, {useContext} from "react";
 import { MdFastfood } from "react-icons/md";
 import { IoSearch } from "react-icons/io5";
 import { LuShoppingBag } from "react-icons/lu";
-import userContext, { dataContext } from "../../context/userContext";
+import { dataContext } from "../../context/userContext";
 
 const Navbar = () => {
   let {input, setInput} = useContext(dataContext)

@@ -1,7 +1,8 @@
-import React , {useState, createContext}from "react";
+import React , {useState, createContext} from "react";
+
 export const dataContext = createContext();
 
-const userContext = ({ children }) => {
+const UserContext = ({ children }) => {
   let [input, setInput] = useState("");
 
   let data = {input, setInput};
@@ -14,4 +15,4 @@ const userContext = ({ children }) => {
   );
 };
 
-export default userContext;
+export default UserContext;
