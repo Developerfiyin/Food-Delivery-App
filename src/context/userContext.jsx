@@ -8,7 +8,11 @@ const UserContext = ({ children }) => {
 
   let [input, setInput] = useState("");
 
-  let data = {input, setInput, categ, Setcateg};
+  let [showcart, setShowcart] = useState(false)
+
+  let data = {input, setInput, categ, Setcateg, showcart, setShowcart};
+
+  let [data1, setData1] = useState("")
   return (
     <div>
       <dataContext.Provider value={data}>
