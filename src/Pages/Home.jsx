@@ -38,17 +38,17 @@ const Home = () => {
       
     
     
-     <div className= " w-full flex flex-wrap gap-5 px-5 jsutify-center items-center pt-8 pb-8 ">
+     <div className= " w-full cursor-pointer flex flex-wrap gap-5 px-5 jsutify-center items-center pt-8 pb-8 ">
  {categ.map((item) => (
   <Card name={item.food_name} image={item.food_image} price={item.price} id={item.id} type={item.food_type} />
         ))}
     </div>
 
 
-<div className={`fixed top-0 h-full w-[40%] right-0 bg-white shadow-xl p-6 ${showcart ? "translate-x-0" : "translate-x-full"}`} >
+<div className={`fixed top-0 h-full w-[40%] right-0 bg-white transition-all cursor-pointer duration-500 shadow-xl p-6 ${showcart ? "translate-x-0" : "translate-x-full"}`} >
   <header className="w-full  items-center justify-between flex  ">
     
-<span className="font-semibold text-[18px] text-purple-500"> Order  Items</span>
+<span className="font-semibold  text-[18px] text-purple-500"> Order  Items</span>
 <RxCross2 className="h-7.5 w-7.5 text-purple-500 text-[18px] hover:text-purple-600 cursor-pointer " onClick={ () => setShowcart(false)} />
 
 
