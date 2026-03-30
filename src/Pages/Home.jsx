@@ -5,6 +5,7 @@ import Card from "../Components/Card";
 import { food_items } from "../food";
 import { dataContext } from "../context/userContext";
 import { RxCross2 } from "react-icons/rx";
+import Card2 from "../Components/Card2";
 
 
 const Home = () => {
@@ -59,7 +60,8 @@ name Taiwo_Fiyinfoluwa
     323 256 6386
     323 256 6386  */}
   </header>
-  
+
+  <Card2 />
 </div>
 
 
