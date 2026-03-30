@@ -8,7 +8,7 @@ import { RxCross2 } from "react-icons/rx";
 
 
 const Home = () => {
-  let {categ, Setcateg, input} = useContext(dataContext)
+  let {categ, Setcateg, input, showcart, setShowcart } = useContext(dataContext)
   
 
     function filter(category) {
@@ -45,11 +45,11 @@ const Home = () => {
     </div>
 
 
-<div className="fixed top-0 h-full w-[40%] right-0 bg-white shadow-xl p-5  ">
+<div className={`fixed top-0 h-full w-[40%] right-0 bg-white shadow-xl p-6 ${showcart ? "translate-x-0" : "translate-x-full"}`} >
   <header className="w-full  items-center justify-between flex  ">
     
 <span className="font-semibold text-[18px] text-purple-500"> Order  Items</span>
-<RxCross2 className="h-7.5 w-7.5 text-purple-500 text-[18px] hover:text-purple-600 cursor-pointer " />
+<RxCross2 className="h-7.5 w-7.5 text-purple-500 text-[18px] hover:text-purple-600 cursor-pointer " onClick={ () => setShowcart(false)} />
 
 
 {/* Taiwopeace20 paassword for byu pathway
