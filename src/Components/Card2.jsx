@@ -11,10 +11,10 @@ const Card2 = () => {
 
         <div className='text-lg text-blue-500 font-semibold '> Pancake</div>
 
-        <div>
-            <button>-</button>
-            <span>1</span>
-            <button>+</button>
+        <div className='w-27.5 h-12.5 bg-slate-300 flex overflow-hidden rounded-lg shadow-lg '>
+            <button className='w-7.5 h-full bg-white flex items-center justify-center '>-</button>
+            <span className='w-10 h-full bg-blue-400 flex justify-center items-center' >1</span>
+            <button className='w-7.5 h-full bg-white flex items-center justify-center '>+</button>
         </div>
         <div></div>
     </div>
