@@ -1,8 +1,10 @@
 import React from 'react'
+import { RiDeleteBin6Line } from "react-icons/ri";
+
 import image from "../assets/image1.avif"
 const Card2 = () => {
   return (
-    <div className='w-full h-30 shadow-lg p-2 '> 
+    <div className='w-full h-30 shadow-lg p-2 flex justify-between '> 
         <div className='w-[60%] h-full  flex gap-5 '>
     <div className='w-[60%] h-full overflow-hidden rounded-lg '>
         <img src={image} alt=" The Image" className='object-cover' />
@@ -19,7 +21,10 @@ const Card2 = () => {
 
 
         </div>
-        <div></div>
+        <div className='flex flex-col gap-5 items-end justify-center '>
+        <span className='text-xl font-semibold text-purple-500 '>$ 499 </span>
+       <RiDeleteBin6Line className='h-7.5 w-7.5  text-purple-500 hover:text-red-600 cursor-pointer ' /> 
+        </div>
 
     </div>
   )
