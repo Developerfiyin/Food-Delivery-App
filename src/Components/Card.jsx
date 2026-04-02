@@ -2,7 +2,7 @@ import React from "react";
 import { LuLeafyGreen } from "react-icons/lu";
 import { GiChickenOven } from "react-icons/gi";
 import { useDispatch } from "react-redux";
-import { addToCart } from "../redux/cartSlice";
+
 
 
 const Card = ({name, id, price, type, image}) => {
