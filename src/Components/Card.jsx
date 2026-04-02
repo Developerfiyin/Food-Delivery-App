@@ -19,12 +19,12 @@ const Card = ({name, id, price, type, image}) => {
         {id}
         <div className="text-xl font-bold text-purple-500  ">{price} </div>
         <div className="flex justify-center items-center gap-2 text-purple-500 text-lg font-semibold ">
-          {type === "veg" ? <LuLeafyGreen /> : <GiChickenOven />}{" "}
+          {type === "veg" ? <LuLeafyGreen /> : <GiChickenOven />}
           <span> {type}</span>
         </div>
       </div>
       <button className=" w-full p-3 rounded-lg bg-purple-300 text-gray-500 hover:bg-purple-500 transition-all duration-200">
-        onclick={() => dispatch(addToCart({ id, name, price, image }))}
+        onclick={() => dispatch(addToCart({ id:id, name:name, price:price, image:image, type:type, qty:1 }))}
         Add to Cart
       </button>
     </div>

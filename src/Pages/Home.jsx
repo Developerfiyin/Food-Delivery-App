@@ -25,9 +25,7 @@ const Home = () => {
     }
 
 
-    let items = useSelector(state => state.cart)
-    console.log(items)
-
+  
   return (
     <div className="w-full min-h-screen bg-fuchsia-100">
       <Navbar />

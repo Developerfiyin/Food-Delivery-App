@@ -13,6 +13,9 @@ const Navbar = () => {
   }, [input])
 
 
+   let items = useSelector(state => state.cart)
+    console.log(items);
+
   return (
     <div className="w-full h-25 flex justify-between items-center px-5 md:px-8">
       <div className="h-15 w-15 rounded-md shadow-xl flex items-center justify-center bg-white  ">
@@ -33,7 +36,7 @@ const Navbar = () => {
 
       <div className="h-15 w-15 rounded-md flex shadow-xl relative items-center justify-center bg-white  "onClick={() => setShowcart(true)} >
         <span className="absolute top-0 right-2 font-bold text-purple-500 text-[18px]">
-          0
+          {items.length}
         </span>
         <LuShoppingBag className="h-7.5 w-7.5 text-purple-500 " />
       </div>
