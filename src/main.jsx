@@ -4,8 +4,9 @@ import "./index.css";
 import App from "./App.jsx";
 import UserContext from "./context/userContext.jsx";
 import { Provider } from "react-redux";
+import { store } from "./redux/store.js";
 createRoot(document.getElementById("root")).render(
-  <Provider>
+  <Provider store={store}>
     <UserContext>
       <App />
     </UserContext>
