@@ -8,6 +8,7 @@ import { RxCross2 } from "react-icons/rx";
 import Card2 from "../Components/Card2";
 
 
+
 const Home = () => {
   let {categ, Setcateg, input, showcart, setShowcart } = useContext(dataContext)
   
@@ -22,6 +23,9 @@ const Home = () => {
             
         }
     }
+
+
+  
   return (
     <div className="w-full min-h-screen bg-fuchsia-100">
       <Navbar />
@@ -63,8 +67,6 @@ name Taiwo_Fiyinfoluwa
 
   <Card2 />
 </div>
-
-
 
     </div>
   );
