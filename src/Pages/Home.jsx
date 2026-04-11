@@ -56,13 +56,6 @@ const Home = () => {
 <RxCross2 className="h-7.5 w-7.5 text-purple-500 text-[18px] hover:text-purple-600 cursor-pointer " onClick={ () => setShowcart(false)} />
 
 
-{/* Taiwopeace20 paassword for byu pathway
-
-name Taiwo_Fiyinfoluwa
-
-     323 256 6386 
-    323 256 6386
-    323 256 6386  */}
   </header>
 
   <Card2 />
