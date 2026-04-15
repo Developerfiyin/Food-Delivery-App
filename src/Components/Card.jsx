@@ -6,9 +6,9 @@ const Card = ({name, id, price, type, image}) => {
   return (
     <div className="w-75 p-4 rounded-lg  h-100 bg-white flex flex-col gap-3 shadow-lg hover:border-2 border-purple-400 ">
       <div className="overflow-hidden  w-full h-[60%] rounded-lg ">
-        <img src={image} alt="" className="object-cover " />
+        <img src={image} alt="" className="object-cover" />
       </div>
-      <div className="text-2xl font-semibold "> {name} </div>
+      <div className="text-2xl font-semibold"> {name} </div>
       <div className=" w-full flex justify-between items-center ">
         {id}
         <div className="text-xl font-bold text-purple-500  ">{price} </div>

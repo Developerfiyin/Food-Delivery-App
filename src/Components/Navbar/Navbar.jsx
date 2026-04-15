@@ -10,6 +10,14 @@ import { dataContext } from "../../context/userContext";
 const Navbar = () => {
   let {Input, setInput} = useContext(dataContext);
 
+
+   let user = {Input, setInput, cate, setCate} = useContext(dataContext);
+    useEffect(() => {
+    let newList = food_items.filter((item) => item.food_name.includes(Input))
+    setCate(newList)
+   }, [Input]
+  )
+
   return (
     <div className=" w-full h-25 bg-slate-200 flex justify-between px-6 items-center md:px-8 ">
       <div className="h-15 w-15 bg-white flex justify-center items-center rounded-md ">
