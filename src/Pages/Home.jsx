@@ -1,11 +1,16 @@
 import React from "react";
+
 import Navbar from "../Components/Navbar/Navbar";
 import Categories from "../Category";
 import Card from "../Components/Card";
 import { food_items } from "../food"
+import { useState } from "react";
+import { dataContext } from "../context/userContext";
+import { useContext } from "react";
 
 const Home = () => {
-  const [cate, setCate] = React.useState(food_items);
+
+  const {input, setInput, cate, setCate} = useContext(dataContext);
 
   function filterItems(category) {
     if(category === "All") {
