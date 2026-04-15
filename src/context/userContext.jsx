@@ -1,9 +1,23 @@
-import React from 'react'
+import { createContext } from "react";
+import React from "react";
+export const dataContext = createContext();
+const userContext = ({ children }) => {
 
-const userContext = () => {
-  return (
-    <div>userContext</div>
-  )
-}
+  let [Input, setInput] = useState("");
 
-export default userContext
+  let user = {  
+    Input,
+    setInput,
+  };
+
+  
+  return <div>
+  <dataContext.Provider value={user}>
+  
+  {children}
+  </dataContext.Provider>
+  
+  </div>;
+};
+
+export default userContext;
