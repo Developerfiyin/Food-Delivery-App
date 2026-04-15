@@ -12,7 +12,7 @@ const Card = ({name, id, price, type, image}) => {
       </div>
       <div className="text-2xl font-semibold "> {name} </div>
       <div className=" w-full flex justify-between items-center ">
-        {" "}
+        
         {id}
         <div className="text-xl font-bold text-purple-500  ">{price} </div>
         <div className="flex justify-center items-center gap-2 text-purple-500 text-lg font-semibold ">
