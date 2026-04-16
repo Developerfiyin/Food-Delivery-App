@@ -1,5 +1,4 @@
 import React from "react";
-
 import Navbar from "../Components/Navbar/Navbar";
 import Categories from "../Category";
 import Card from "../Components/Card";
