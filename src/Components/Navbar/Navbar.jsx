@@ -12,7 +12,7 @@ const Navbar = () => {
 
 
 
-    let {Input, setInput, cate, setCate} = useContext(dataContext);
+    let {Input, setInput, cate, setCate, showcart, setShowcart} = useContext(dataContext);
   useEffect(() => {
      let newList = food_items.filter((item) => item.food_name.includes(Input) || item.food_name.toLowerCase().includes(Input) || item.food_name.toUpperCase().includes(Input));
    setCate(newList)
@@ -30,8 +30,8 @@ const Navbar = () => {
         <input type="text" placeholder="Search Items...." className="w-full outline-none text-[16px] md:text-[20px] " onChange={(e) => setInput(e.target.value)} />
       </form>
 
-
-      <div className=" h-15 w-15 bg-white flex relative justify-center items-center rounded-md">
+    
+      <div className=" h-15 w-15 bg-white flex relative cursor-pointer justify-center items-center rounded-md" onClick={() => setShowcart(true)}>
         <span className="absolute top-0 right-2 font-bold text-purple-400 text-[18px]">0</span>
         <LuShoppingBag className="w-7.5 h-7.5 text-purple-500 shadow-xl" />
       </div>
