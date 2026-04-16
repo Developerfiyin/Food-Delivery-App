@@ -6,10 +6,12 @@ import { food_items } from "../food"
 import { useState } from "react";
 import { dataContext } from "../context/userContext";
 import { useContext } from "react";
+import { RxCross2 } from "react-icons/rx";
+
 
 const Home = () => {
 
-  const {input, setInput, cate, setCate} = useContext(dataContext);
+  const {input, setInput, cate, setCate } = useContext(dataContext);
 
   function filterItems(category) {
     if(category === "All") {
@@ -24,7 +26,8 @@ const Home = () => {
 
     <div className="w-full min-h-screen bg-slate-200 ">
       <Navbar />
-      <div className="flex flex-wrap justify-center items-center gap-5 w-full ">
+
+      {input <0 ?  <div className="flex flex-wrap justify-center items-center gap-5 w-full ">
         {Categories.map((category) => (
           <div
             key={category.id}
@@ -35,7 +38,8 @@ const Home = () => {
             <span>{category.name}</span>
           </div>
         ))}
-      </div>
+      </div> : null}
+     
 
       <div className="flex flex-wrap gap-5 px-5 justify-center items-center  pt-8 pb-8  ">
         {cate.map((items) => (
@@ -43,6 +47,15 @@ const Home = () => {
           items={items.food_type} />
 
         ))}
+      </div>
+
+
+      <div className="w-[40vw] h-full bg-white shadow-xl  fixed top-0 right-0 p-6 ">
+        <header className="w-full flex justify-between items-center ">
+<span className="text-green-400 text-[18px] font-semibold "> Order Items</span>
+<RxCross2 className="text-green-400 text-[18px] font-semibold h-7.5 w-7.5 cursor-pointer hover:text-purple-600 " />
+
+        </header>
       </div>
     </div>
   );
