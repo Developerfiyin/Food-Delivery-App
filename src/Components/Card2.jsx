@@ -1,9 +1,20 @@
-import React from 'react'
+import React from "react";
 
 const Card2 = () => {
   return (
-    <div>Card2</div>
-  )
-}
+    <div>
+      <div>
+        <div>
+          <img src="" alt="" />
+        </div>
+        <div>
+          <div>Pancake</div>
+          <div></div>
+        </div>
+      </div>
+      <div></div>
+    </div>
+  );
+};
 
-export default Card2
+export default Card2;

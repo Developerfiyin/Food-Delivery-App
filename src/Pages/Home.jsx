@@ -68,10 +68,8 @@ const Home = () => {
             onClick={() => setShowcart(false)}
           />
         </header>
+        <Card2 />
       </div>
-
-   <Card2 />
-
     </div>
   );
 };
