@@ -7,6 +7,7 @@ import { useState } from "react";
 import { dataContext } from "../context/userContext";
 import { useContext } from "react";
 import { RxCross2 } from "react-icons/rx";
+import Card2 from "../Components/Card2";
 
 const Home = () => {
   const { input, setInput, cate, setCate, showcart, setShowcart } =
@@ -68,6 +69,9 @@ const Home = () => {
           />
         </header>
       </div>
+
+   <Card2 />
+
     </div>
   );
 };

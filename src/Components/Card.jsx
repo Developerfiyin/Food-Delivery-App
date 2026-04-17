@@ -17,7 +17,7 @@ const Card = ({name, id, price, type, image}) => {
           <span> {type}</span>
         </div>
       </div>
-      <button className="w-full p-3 rounded-lg bg-purple-300 text-gray-500 hover:bg-purple-500 transition-all duration-200">
+      <button className="w-full p-3 rounded-lg bg-purple-300 text-white hover:bg-purple-500 transition-all duration-200">
         {/* onclick={() => dispatch(addToCart({ id:id, name:name, price:price, image:image, type:type, qty:1 }))}  */}
         Add to Cart
       </button>
