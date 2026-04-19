@@ -5,20 +5,19 @@ import image from "../assets/image1.avif";
 const Card2 = () => {
   return (
     <div className="w-full h-30 bg-red-600 p-2 ">
-      <div className=" w-[60%] h-full bg-purple-600 flex ">
-        <div className="w-[60%] h-full bg-white overflow-hidden rounded-lg">
-          <img src={image} alt="Pancake" className=" object-cover"/>
+      <div className=" w-[60%] h-full bg-purple-600 flex  ">
+        <div className="w-[60%] h-full bg-white overflow-hidden rounded-lg ">
+          <img src={image} alt="Pancake" className=" object-cover " />
         </div>
-        <div className="flex flex-col gap-5 w-[40%] h-full ">
-          <div className="text-lg font-semibold text-gray-600">Pancake</div>
-          <div className="bg-slate-400 ">
-
-            <button>-</button>
-            <span>0</span>
-            <button>+</button>
+        <div className="flex flex-col gap-5 w-[40%] h-full  ">
+          <div className="text-lg font-semibold text-slate-500">Pancake</div>
+          <div className="bg-slate-400 h-12.5 w-27.5 flex rounded-lg  overflow-hidden shadow-lg font-semibold border-2 border-purple-400 text-xl ">
+            <button className="w-[30%] bg-white flex justify-center items-center text-purple-300 hover:bg-slate-100 ">-</button>
+            <span className="w-[40%] h-full flex justify-center items-center text-lg bg-slate-300 text-purple-400 ">0</span>
+            <button className="w-[30%] bg-white flex justify-center items-center text-purple-300 hover:bg-slate-100 ">+</button>
           </div>
         </div>
-      </div>z
+      </div>
       <div></div>
     </div>
   );
