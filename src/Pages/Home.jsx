@@ -25,10 +25,8 @@ const Home = () => {
     }
   }
 
+  let items = useSelector((state) => state.cart);
 
-
-
-  
   return (
     <div className="w-full min-h-screen bg-slate-200 ">
       <Navbar />
@@ -59,7 +57,7 @@ const Home = () => {
             items={items.food_type}
           />
         ))}
-      </div> 
+      </div>
 
       <div
         className={`w-[40vw] h-full bg-white shadow-xl  fixed top-0 right-0 p-6 transition-all duration-300 ${showcart ? "translate-x-0" : "translate-x-full"}`}
@@ -74,7 +72,12 @@ const Home = () => {
             onClick={() => setShowcart(false)}
           />
         </header>
-        <Card2 />
+
+        <div>
+          {items.map((items) => (
+            <Card2 name={items.name} price={items.price} image={items.image} id={items.id} />
+          ))}
+        </div>
       </div>
     </div>
   );
