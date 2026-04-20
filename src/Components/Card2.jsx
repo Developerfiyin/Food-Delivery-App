@@ -28,8 +28,6 @@ const Card2 = () => {
         <span className="text-xl text-purple-300 font-semibold "> $299</span>
         <RiDeleteBin5Line className=" w-7.5 h-7.5  text-red-400 "  />
       </div>
-
-     
     </div>
   );
 };

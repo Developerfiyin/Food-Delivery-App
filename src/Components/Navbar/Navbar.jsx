@@ -18,6 +18,7 @@ const Navbar = () => {
    setCate(newList)
   }, [Input])
 
+  let items = useSelector(state => state.cart )
 
   return (
     <div className=" w-full h-25 bg-slate-200 flex justify-between px-6 items-center md:px-8 ">
@@ -32,10 +33,9 @@ const Navbar = () => {
 
     
       <div className=" h-15 w-15 bg-white flex relative cursor-pointer justify-center items-center rounded-md" onClick={() => setShowcart(true)}>
-        <span className="absolute top-0 right-2 font-bold text-purple-400 text-[18px]">0</span>
+        <span className="absolute top-0 right-2 font-bold text-purple-400 text-[18px]">{items.length } </span>
         <LuShoppingBag className="w-7.5 h-7.5 text-purple-500 shadow-xl" />
       </div>
-      
 
     </div>
   );
