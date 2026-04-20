@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { use } from 'react'
 import { LuLeafyGreen } from "react-icons/lu";
 import { GiChickenOven } from "react-icons/gi";
+import { useDispatch } from "react-redux";
+import { AddItems } from './redux/cartSlice';
 
-const Card = ({name, id, price, type, image}) => {
+
+const Card = ({name,image, id, price, type}) => {
+  let dispatch = useDispatch();
+
   return (
     <div className="w-75 p-4 rounded-lg  h-100 bg-white flex flex-col gap-3 shadow-lg hover:border-2 border-purple-400 ">
       <div className="overflow-hidden  w-full h-[60%] rounded-lg ">
@@ -17,8 +22,11 @@ const Card = ({name, id, price, type, image}) => {
           <span> {type}</span>
         </div>
       </div>
-      <button className="w-full p-3 rounded-lg bg-purple-300 text-white hover:bg-purple-500 transition-all duration-200">
+      <button className="w-full p-3 rounded-lg bg-purple-300 text-white hover:bg-purple-500 transition-all duration-200" 
+      onClick={ () => dispatch (AddItems(id) )    }
+      >
         {/* onclick={() => dispatch(addToCart({ id:id, name:name, price:price, image:image, type:type, qty:1 }))}  */}
+        
         Add to Cart
       </button>
     </div>
