@@ -2,7 +2,6 @@ import React, { use } from "react";
 import { LuLeafyGreen } from "react-icons/lu";
 import { GiChickenOven } from "react-icons/gi";
 import { GiLeafSkeleton } from "react-icons/gi";
-
 import { useDispatch } from "react-redux";
 import { AddItems } from "./redux/cartSlice";
 
@@ -25,9 +24,8 @@ const Card = ({ name, image, id, price, type }) => {
       </div>
       <button
         className="w-full p-3 rounded-lg bg-purple-300 text-white hover:bg-purple-500 transition-all duration-200"
-        onClick={() => dispatch(AddItems({id: id }))}
+        onClick={() => dispatch(AddItems({id: id, name:name, price:price, image:image, type:type, qty:1 }))}
       >
-        {/* onclick={() => dispatch(addToCart({ id:id, name:name, price:price, image:image, type:type, qty:1 }))}  */}
         Add to Cart
       </button>
     </div>
