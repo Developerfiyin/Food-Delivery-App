@@ -73,10 +73,19 @@ const Home = () => {
           />
         </header>
 
-        <div>
+        <div className="w-full flex flex-col gap-5 mt-9">
           {items.map((items) => (
-            <Card2 name={items.name} price={items.price} image={items.image} id={items.id} />
+            <Card2
+              name={items.name}
+              price={items.price}
+              image={items.image}
+              id={items.id}
+              qty={items.qty}
+            />
           ))}
+        </div>
+        <div className="w-full border-t-2 border-gray-500 mt-7 ">
+          
         </div>
       </div>
     </div>
