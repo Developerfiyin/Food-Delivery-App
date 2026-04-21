@@ -66,7 +66,7 @@ const Home = () => {
       </div>
 
       <div
-        className={`w-[40vw] h-full bg-white shadow-xl  fixed top-0 right-0 p-6 transition-all duration-300 ${showcart ? "translate-x-0" : "translate-x-full"}`}
+        className={`w-full md:w-[40vw] h-full bg-white shadow-xl flex flex-col items-center overflow-auto fixed top-0 right-0 p-6 transition-all duration-300 ${showcart ? "translate-x-0" : "translate-x-full"}`}
       >
         <header className="w-full flex justify-between items-center ">
           <span className="text-purple-400 text-[18px] font-semibold ">
@@ -79,7 +79,7 @@ const Home = () => {
           />
         </header>
 
-        <div className="w-full flex flex-col gap-5 mt-9">
+        <div className="w-full flex flex-col gap-5 mt-9 items-center">
           {items.map((items) => (
             <Card2
               name={items.name}
@@ -109,26 +109,25 @@ const Home = () => {
               </span>
             </div>
           </div>
-          <div>
-            <div className="w-full flex justify-between items-center ">
-              <span className="text-xl font-semibold text-gray-500 ">
-                Taxes
-              </span>
-              <span className="font-semibold text-lg text-purple-400 ">
-                $ {taxes}
-              </span>
-            </div>
-          </div>
-        </div>
 
-        <div>
-          <div className="w-full flex justify-between items-center p-9 ">
-            <span className="text-2xl font-semibold text-gray-500 ">Total</span>
+          <div className="w-full flex justify-between items-center ">
+            <span className="text-xl font-semibold text-gray-500 ">Taxes</span>
             <span className="font-semibold text-lg text-purple-400 ">
-              $ {total}
+              $ {taxes}
             </span>
           </div>
         </div>
+
+        <div className="w-full flex justify-between items-center p-9 ">
+          <span className="text-2xl font-semibold text-gray-500 ">Total</span>
+          <span className="font-semibold text-lg text-purple-400 ">
+            $ {total}
+          </span>
+        </div>
+
+        <button className="w-full p-3 rounded-lg bg-purple-500 text-white hover:bg-purple-300 transition-all duration-200">
+          Place Order
+        </button>
       </div>
     </div>
   );
