@@ -27,6 +27,13 @@ const Home = () => {
 
   let items = useSelector((state) => state.cart);
 
+  let subtotal = items.reduce((total, item) => total + item.price, 0)
+  let deliveryFee = 20
+  let taxes = subtotal*0.5/100 
+  let total = subtotal + deliveryFee + taxes 
+  console.log(subtotal);
+  
+
   return (
     <div className="w-full min-h-screen bg-slate-200 ">
       <Navbar />
@@ -84,8 +91,24 @@ const Home = () => {
             />
           ))}
         </div>
-        <div className="w-full border-t-2 border-gray-500 mt-7 ">
+        <div className="w-full border-t-2 border-b-2  border-gray-500 mt-7 flex flex-col gap-4 p-8 ">
           
+          <div className="w-full flex justify-between items-center ">
+            <span className="text-xl font-semibold text-gray-500 ">Subtotal</span>
+            <span className="font-semibold text-lg text-purple-400">$ {subtotal}</span>
+          </div>
+          <div>
+             <div className="w-full flex justify-between items-center ">
+            <span className="text-xl font-semibold text-gray-500 ">DeliveryFee</span>
+            <span className="font-semibold text-lg text-purple-400">$ {deliveryFee}</span>
+          </div>
+          </div>
+          <div>
+             <div className="w-full flex justify-between items-center ">
+            <span className="text-xl font-semibold text-gray-500 ">Taxes</span>
+            <span className="font-semibold text-lg text-purple-400 ">$ {taxes}</span>
+          </div>
+          </div>
         </div>
       </div>
     </div>
