@@ -3,7 +3,7 @@ import { RiDeleteBin5Line } from "react-icons/ri";
 
 import image from "../assets/image1.avif";
 import { useDispatch } from "react-redux";
-import { RemoveItems } from "./redux/cartSlice";
+import { IncreamentQty, RemoveItems } from "./redux/cartSlice";
 
 const Card2 = ({ name, image, price, qty, id }) => {
   let dispatch = useDispatch();
@@ -23,7 +23,10 @@ const Card2 = ({ name, image, price, qty, id }) => {
             <span className="w-[40%] h-full flex justify-center items-center text-lg  bg-slate-300 text-purple-400 ">
               {qty}
             </span>
-            <button className="w-[30%] bg-white flex justify-center items-center text-purple-300 hover:bg-slate-100 ">
+            <button
+              className="w-[30%] cursor-pointer bg-white  flex justify-center items-center text-purple-300 hover:bg-slate-100 "
+              onClick={ () =>  dispatch(IncreamentQty(id)) }
+            >
               +
             </button>
           </div>
