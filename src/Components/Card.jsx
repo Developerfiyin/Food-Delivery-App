@@ -4,7 +4,9 @@ import { GiChickenOven } from "react-icons/gi";
 import { GiLeafSkeleton } from "react-icons/gi";
 import { useDispatch } from "react-redux";
 import { AddItems } from "./redux/cartSlice";
+import {dismiss, update, error, message, warning, success, info} from 'react-toastify-redux';
 
+import { ToastContainer } from "react-toastify-redux";
 const Card = ({ name, image, id, price, type }) => {
   let dispatch = useDispatch();
 
@@ -24,7 +26,11 @@ const Card = ({ name, image, id, price, type }) => {
       </div>
       <button
         className="w-full p-3 rounded-lg bg-purple-500 text-white hover:bg-purple-300 transition-all duration-200"
-        onClick={() => dispatch(AddItems({id: id, name:name, price:price, image:image, type:type, qty:1 }))}
+        onClick={() => {dispatch(AddItems({id: id, name:name, price:price, image:image, type:type, qty:1 }));
+       
+        toast.success("item added")}
+
+      }
       >
         Add to Cart
       </button>
