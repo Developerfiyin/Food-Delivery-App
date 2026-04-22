@@ -54,7 +54,7 @@ const Home = () => {
       ) : null}
 
       <div className="flex flex-wrap gap-5 px-5 justify-center items-center  pt-8 pb-8  ">
-        {cate.map((items) => (
+        {cate.length > 1 ? cate.map((items) => (
           <Card
             name={items.food_name}
             image={items.food_image}
@@ -62,7 +62,8 @@ const Home = () => {
             id={items.id}
             items={items.food_type}
           />
-        ))}
+        )) : <div className="font-semibold text-2xl text-purple-500 text-center "> No dish Found</div> }
+      
       </div>
 
       <div
@@ -78,7 +79,7 @@ const Home = () => {
             onClick={() => setShowcart(false)}
           />
         </header>
-
+        {items.length > 0 ? <>
         <div className="w-full flex flex-col gap-5 mt-9 items-center">
           {items.map((items) => (
             <Card2
@@ -90,6 +91,7 @@ const Home = () => {
             />
           ))}
         </div>
+
         <div className="w-full border-t-2 border-b-2  border-gray-500 mt-7 flex flex-col gap-4 p-8 ">
           <div className="w-full flex justify-between items-center ">
             <span className="text-xl font-semibold text-gray-500 ">
@@ -128,6 +130,8 @@ const Home = () => {
         <button className="w-full p-3 rounded-lg bg-purple-500 text-white hover:bg-purple-300 transition-all duration-200">
           Place Order
         </button>
+      </> : <div className="pt-9  font-semibold text-2xl text-purple-400 text-center"> Empty Cart</div> }
+ 
       </div>
     </div>
   );
