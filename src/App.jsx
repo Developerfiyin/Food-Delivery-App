@@ -1,12 +1,12 @@
 import Home from "./Pages/Home"
-import {ToastContainer} from "react-toastify-redux"
+import { ToastContainer } from "react-toastify"
 function App() {
 
   return (
     <>
       <div>
         <Home/>
-        <ToastContainer/>
+       {/* <ToastContainer/>  */}
         </div>    
         </>
   )
