@@ -9,7 +9,7 @@ const Card2 = ({ name, image, price, qty, id }) => {
   let dispatch = useDispatch();
 
   return (
-    <div className="w-full h-30 p-2 shadow-lg flex justify-center ">
+    <div className="w-full h-30 p-2 shadow-lg flex justify-between  ">
       <div className=" w-[60%] h-full  flex  gap-5">
         <div className="w-[60%] h-full bg-white overflow-hidden rounded-lg ">
           <img src={image} alt="Pancake" className=" object-cover " />

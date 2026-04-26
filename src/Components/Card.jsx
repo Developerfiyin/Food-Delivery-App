@@ -24,12 +24,8 @@ const Card = ({ name, image, id, price, type }) => {
         </div>
       </div>
       <button
-        className="w-full p-3 rounded-lg bg-purple-500 text-white hover:bg-purple-300 transition-all duration-200"
-        onClick={() => { dispatch(AddItems({id: id, name:name, price:price, image:image, type:type, qty:1 }));
-       
-      toast.success("items added") }
-
-      }
+        className="w-full p-3 rounded-lg bg-purple-500 text-white hover:bg-purple-400 transition-all duration-200"
+        onClick={() =>  dispatch(AddItems({id: id, name:name, price:price, image:image, type:type, qty:1 }))}
       >
         Add to Cart
       </button>
