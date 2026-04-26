@@ -127,7 +127,7 @@ const Home = () => {
           </span>
         </div>
 
-        <button className="w-full p-3 rounded-lg bg-purple-500 text-white hover:bg-purple-300 transition-all duration-200">
+        <button className="w-full p-3 rounded-lg bg-purple-500 text-white hover:bg-purple-400 transition-all duration-200">
           Place Order
         </button>
       </> : <div className="pt-9  font-semibold text-2xl text-purple-400 text-center"> Empty Cart</div> }
